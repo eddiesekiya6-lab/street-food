@@ -233,7 +233,7 @@ document.getElementById("checkout-btn").addEventListener("click", () => {
     message += `\nTOTAL: MWK ${total.toLocaleString("en-US")}`;
 
     // Replace this with the actual restaurant WhatsApp number.
-    const restaurantNumber = "265XXXXXXXXX";
+    const restaurantNumber = "265896917009";
 
     const whatsappURL =
         `https://wa.me/${restaurantNumber}?text=${encodeURIComponent(message)}`;
