@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Food | Good Food. Good Mood.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">STREET<span>FOOD.</span></a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Our Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#cart" class="cart-link">
+                My Cart (<span id="cart-count">0</span>)
+            </a>
+
+            <a href="#menu" class="nav-btn">Order Now</a>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="tagline">WELCOME TO STREET FOOD</p>
+
+                <h1>
+                    GOOD FOOD.<br>
+                    <span>GOOD MOOD.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Delicious burgers, crispy chicken, tasty shawarma
+                    and more. Your next favourite meal is waiting.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#menu" class="primary-btn">Explore Menu</a>
+                    <a href="#about" class="secondary-btn">Discover Us</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="menu-section" id="menu">
+
+            <div class="section-heading">
+                <p class="tagline">MADE FRESH FOR YOU</p>
+                <h2>Explore Our Menu</h2>
+                <p>Great food. Great taste. Every single time.</p>
+            </div>
+
+            <div class="menu-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="burgers">Burgers</button>
+                <button class="filter-btn" data-category="chicken">Chicken</button>
+                <button class="filter-btn" data-category="shawarma">Shawarma</button>
+                <button class="filter-btn" data-category="fast-food">Fast Food</button>
+                <button class="filter-btn" data-category="sides">Sides</button>
+                <button class="filter-btn" data-category="drinks">Drinks</button>
+            </div>
+
+            <div class="menu-grid">
+
+                <!-- BURGERS -->
+
+                <article class="menu-card" data-category="burgers">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700" alt="Classic Burger">
+                    <div class="card-info">
+                        <h3>Classic Burger</h3>
+                        <p>A delicious burger packed with flavour.</p>
+                        <span class="price">MWK 8,500</span>
+                        <button class="add-to-cart" data-name="Classic Burger" data-price="8500">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="burgers">
+                    <img src="https://images.unsplash.com/photo-1625683257212-116d74981941?w=700&utm_source=chatgpt.com"
+                        alt="Double Cheeseburger">
+                    <div class="card-info">
+                        <h3>Double Cheeseburger</h3>
+                        <p>Two beef patties with melted cheese and fresh vegetables.</p>
+                        <span class="price">MWK 12,000</span>
+                        <button class="add-to-cart" data-name="Double Cheeseburger" data-price="12000">Add to
+                            Cart</button>
+                    </div>
+                </article>
+
+                <!-- CHICKEN -->
+
+                <article class="menu-card" data-category="chicken">
+                    <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=700" alt="Crispy Chicken">
+                    <div class="card-info">
+                        <h3>Crispy Chicken</h3>
+                        <p>Golden, crispy and freshly prepared.</p>
+                        <span class="price">MWK 12,000</span>
+                        <button class="add-to-cart" data-name="Crispy Chicken" data-price="12000">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="chicken">
+                    <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=700"
+                        alt="BBQ Chicken Wings">
+                    <div class="card-info">
+                        <h3>BBQ Chicken Wings</h3>
+                        <p>Juicy chicken wings coated in barbecue sauce.</p>
+                        <span class="price">MWK 9,000</span>
+                        <button class="add-to-cart" data-name="BBQ Chicken Wings" data-price="9000">Add to Cart</button>
+                    </div>
+                </article>
+
+                <!-- SHAWARMA -->
+
+                <article class="menu-card" data-category="shawarma">
+                    <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=700"
+                        alt="Chicken Shawarma">
+                    <div class="card-info">
+                        <h3>Chicken Shawarma</h3>
+                        <p>A tasty wrap filled with delicious flavours.</p>
+                        <span class="price">MWK 7,500</span>
+                        <button class="add-to-cart" data-name="Chicken Shawarma" data-price="7500">Add to Cart</button>
+                    </div>
+                </article>
+
+                <!-- FAST FOOD -->
+
+                <article class="menu-card" data-category="fast-food">
+                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=700" alt="Pepperoni Pizza">
+                    <div class="card-info">
+                        <h3>Pepperoni Pizza</h3>
+                        <p>Cheese, pepperoni and delicious tomato sauce.</p>
+                        <span class="price">MWK 15,000</span>
+                        <button class="add-to-cart" data-name="Pepperoni Pizza" data-price="15000">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="fast-food">
+                    <img src="https://images.unsplash.com/photo-1612392062631-94dd858cba88?w=700" alt="Classic Hot Dog">
+                    <div class="card-info">
+                        <h3>Classic Hot Dog</h3>
+                        <p>A grilled sausage with tasty toppings and sauces.</p>
+                        <span class="price">MWK 6,500</span>
+                        <button class="add-to-cart" data-name="Classic Hot Dog" data-price="6500">Add to Cart</button>
+                    </div>
+                </article>
+
+                <!-- SIDES -->
+
+                <article class="menu-card" data-category="sides">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=700" alt="French Fries">
+                    <div class="card-info">
+                        <h3>French Fries</h3>
+                        <p>Fresh, crispy and golden fries.</p>
+                        <span class="price">MWK 6,000</span>
+                        <button class="add-to-cart" data-name="French Fries" data-price="6000">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="sides">
+                    <img src="https://images.unsplash.com/photo-1518013431117-eb1465fa5752?w=700" alt="Loaded Fries">
+                    <div class="card-info">
+                        <h3>Loaded Fries</h3>
+                        <p>Crispy fries topped with cheese and sauce.</p>
+                        <span class="price">MWK 7,000</span>
+                        <button class="add-to-cart" data-name="Loaded Fries" data-price="7000">Add to Cart</button>
+                    </div>
+                </article>
+
+                <!-- DRINKS -->
+
+                <article class="menu-card" data-category="drinks">
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=700"
+                        alt="Chocolate Milkshake">
+                    <div class="card-info">
+                        <h3>Chocolate Milkshake</h3>
+                        <p>A rich and creamy chocolate milkshake.</p>
+                        <span class="price">MWK 5,500</span>
+                        <button class="add-to-cart" data-name="Chocolate Milkshake" data-price="5500">Add to
+                            Cart</button>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="drinks">
+                    <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=700"
+                        alt="Strawberry Smoothie">
+                    <div class="card-info">
+                        <h3>Strawberry Smoothie</h3>
+                        <p>A refreshing strawberry blend.</p>
+                        <span class="price">MWK 5,000</span>
+                        <button class="add-to-cart" data-name="Strawberry Smoothie" data-price="5000">Add to
+                            Cart</button>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-category="drinks">
+                    <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=700"
+                        alt="Vanilla Milkshake">
+                    <div class="card-info">
+                        <h3>Vanilla Milkshake</h3>
+                        <p>A smooth and creamy vanilla treat.</p>
+                        <span class="price">MWK 5,000</span>
+                        <button class="add-to-cart" data-name="Vanilla Milkshake" data-price="5000">Add to Cart</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+
+        <!-- FOOD GALLERY -->
+        <section class="gallery-section" id="gallery">
+
+            <div class="section-heading">
+                <p class="tagline">OUR FOOD GALLERY</p>
+                <h2>A Taste of Street Food</h2>
+                <p>Freshly prepared. Beautifully served. Always delicious.</p>
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800"
+                        alt="Delicious classic burger">
+                    <div class="gallery-overlay">
+                        <h3>Classic Burgers</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800"
+                        alt="Crispy fried chicken">
+                    <div class="gallery-overlay">
+                        <h3>Crispy Chicken</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=800"
+                        alt="Fresh shawarma wrap">
+                    <div class="gallery-overlay">
+                        <h3>Fresh Shawarma</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800"
+                        alt="Golden French fries">
+                    <div class="gallery-overlay">
+                        <h3>Golden Fries</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="cart-section" id="cart">
+            <div class="container">
+                <h2>Your Shopping Cart</h2>
+
+                <div id="cart-items">
+                    <p>Your cart is currently empty.</p>
+                </div>
+
+                <div class="checkout-details">
+                    <h3>Customer Details</h3>
+
+                    <input type="text" id="customer-name" placeholder="Your full name">
+
+                    <input type="tel" id="customer-phone" placeholder="Your phone number">
+
+                    <select id="order-type">
+                        <option value="Pickup">Pickup</option>
+                        <option value="Delivery">Delivery</option>
+                    </select>
+
+                    <input type="text" id="customer-location" placeholder="Delivery location (if applicable)">
+                </div>
+
+                <div class="cart-total">
+                    <h3>Total: <span id="cart-total">MWK 0</span></h3>
+                    <button id="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <p class="tagline">MORE THAN JUST FOOD</p>
+            <h2>Good food brings people together.</h2>
+            <p>Welcome to Street Food. Your destination for delicious
+                fast food and great moments.</p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>STREET<span>FOOD.</span></h2>
+        <p>Good Food. Good Mood.</p>
+        <p>Malawi | Contact details coming soon</p>
+        <p class="copyright">© 2026 Street Food. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
