@@ -186,7 +186,9 @@ cartItems.addEventListener("click", event => {
 // WHATSAPP CHECKOUT
 // ===================================
 
-document.getElementById("checkout-btn").addEventListener("click", () => {
+const checkoutBtn = document.getElementById("checkout-btn");
+
+checkoutBtn.addEventListener("click", function () {
 
     if (cart.length === 0) {
         alert("Your cart is empty!");
@@ -198,47 +200,44 @@ document.getElementById("checkout-btn").addEventListener("click", () => {
     const orderType = document.getElementById("order-type").value;
     const location = document.getElementById("customer-location").value.trim();
 
-    if (!name || !phone) {
-        alert("Please enter your name and phone number.");
+    if (!name || !phone || !orderType) {
+        alert("Please fill in your customer details.");
         return;
     }
 
-    if (orderType === "Delivery" && !location) {
-        alert("Please enter your delivery location.");
-        return;
+    const restaurantNumber = "265896917009";
+
+    let message = `*NEW FOOD ORDER*\n\n`;
+    message += `*Customer:* ${name}\n`;
+    message += `*Phone:* ${phone}\n`;
+    message += `*Order Type:* ${orderType}\n`;
+
+    if (location) {
+        message += `*Location:* ${location}\n`;
     }
+
+    message += `\n*ORDER ITEMS:*\n`;
 
     let total = 0;
 
-    let message = `Hello Street Food! I would like to place an order.\n\n`;
+    cart.forEach((item, index) => {
 
-    message += `Customer: ${name}\n`;
-    message += `Phone: ${phone}\n`;
-    message += `Order type: ${orderType}\n`;
-
-    if (orderType === "Delivery") {
-        message += `Location: ${location}\n`;
-    }
-
-    message += "\nMY ORDER:\n";
-
-    cart.forEach(item => {
         const subtotal = item.price * item.quantity;
-
         total += subtotal;
 
-        message += `${item.name} x ${item.quantity} = MWK ${subtotal.toLocaleString("en-US")}\n`;
+        message += `\n${index + 1}. ${item.name}\n`;
+        message += `   Quantity: ${item.quantity}\n`;
+        message += `   Price: MWK ${subtotal.toLocaleString()}\n`;
+
     });
 
-    message += `\nTOTAL: MWK ${total.toLocaleString("en-US")}`;
-
-    // Replace this with the actual restaurant WhatsApp number.
-    const restaurantNumber = "265896917009";
+    message += `\n*TOTAL: MWK ${total.toLocaleString()}*`;
 
     const whatsappURL =
         `https://wa.me/${restaurantNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappURL, "_blank");
+
 });
 
 
